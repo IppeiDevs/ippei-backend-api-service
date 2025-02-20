@@ -4,9 +4,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
-permissions:
-  issues: write # Grant write permissions for issues
-  pull_requests: write # Grant write permissions for pull requests
+permissions: write-all
 
 jobs:
   lint:
