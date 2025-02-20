@@ -1,3 +1,7 @@
+# ippei-backend-api-service
+
+Ippei Backend API Service – A NestJS-powered backend supporting web scraping, YouTube data extraction, and Slack chat integration. Designed for scalability and performance, it provides structured data retrieval and seamless API interactions. 🚀
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
