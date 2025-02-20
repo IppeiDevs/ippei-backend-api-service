@@ -4,7 +4,9 @@ import {
   InternalServerErrorException,
   Logger,
   Post,
+  UseGuards,
 } from '@nestjs/common';
+import { ApiKeyGuard } from 'src/guard/api-key.guard';
 import { YoutubeTranscript } from 'youtube-transcript';
 
 type transcriptData = {
@@ -15,6 +17,7 @@ type transcriptData = {
 };
 
 @Controller('youtube-video-scraper')
+@UseGuards(ApiKeyGuard)
 export class YoutubeVideoScraperController {
   logger = new Logger(YoutubeVideoScraperController.name);
 
