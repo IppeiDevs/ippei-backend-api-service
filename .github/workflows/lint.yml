@@ -1,8 +1,12 @@
-name: Lint on Pull Request
+name: Lint and Add Label on Pull Request
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+
+permissions:
+  issues: write # Grant write permissions for issues and pull requests
+  pull_requests: write
 
 jobs:
   lint:
@@ -23,7 +27,7 @@ jobs:
       - name: Run Lint
         run: npm run lint # Assuming you have a "lint" script defined in your package.json
 
-      - name: Add "Ready for Deployment" label
+      - name: Add "Ready for Merging" label
         if: success() # Only runs if the linting step is successful
         uses: actions/github-script@v6
         with:
