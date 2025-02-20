@@ -18,7 +18,7 @@ jobs:
           node-version: '16'  # Adjust the version as needed
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Run Lint
         run: npm run lint  # Assuming you have a "lint" script defined in your package.json
