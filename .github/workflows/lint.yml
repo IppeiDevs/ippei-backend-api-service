@@ -32,7 +32,7 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const prNumber = pr.number;
-            const label = 'Linting Passed';
+            const label = 'linting passed';
 
             // Add the label to the PR
             await github.rest.issues.addLabels({
